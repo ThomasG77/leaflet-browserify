@@ -1,0 +1,29 @@
+{
+  "name": "leaflet_browserify",
+  "version": "0.0.0",
+  "description": "Leaflet browserify demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "beefy static/js/app.js:static/js/bundle.js --live",
+    "deploystatic": "npm run minifycss && npm run bundle",
+    "prestart": "npm run minifycss",
+    "bundle": "./node_modules/.bin/browserify static/js/app.js | uglifyjs > static/js/bundle.js",
+    "minifycss": "./node_modules/.bin/cleancss -o static/css/styles.min.css static/css/style.css"
+  },
+  "keywords": [
+    "leaflet",
+    "map"
+  ],
+  "author": "Thomas Gratier",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^0.7.3",
+    "leaflet-layerjson": "^0.1.5"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^7.0.0",
+    "clean-css": "^2.2.20",
+    "uglify-js": "^2.4.15"
+  }
+}

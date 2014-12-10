@@ -1,3 +1,13 @@
+// Ajouter Leaflet.js
+var L = require('leaflet');
+// Puis le plugin pour le JSON (utilisé pour l'Overpass API)
+require('leaflet-layerjson/dist/leaflet-layerjson.min.js');
+
+// Indiquer le chemin vers le dossier d'images de Leaflet
+L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
+
+console.log(L.Icon.Default.imagePath);
+
 // Instancier la carte 
 var map = L.map('map', {
   scrollWheelZoom: false
