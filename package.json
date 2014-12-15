@@ -20,6 +20,9 @@
     "leaflet": "^0.7.3",
     "leaflet-layerjson": "^0.1.5"
   },
+  "browser": {
+    "leaflet-layerjson": "./node_modules/leaflet-layerjson/dist/leaflet-layerjson.min.js"
+  },
   "devDependencies": {
     "beefy": "^2.1.1",
     "browserify": "^7.0.0",
